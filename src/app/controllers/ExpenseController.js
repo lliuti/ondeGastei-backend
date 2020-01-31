@@ -4,6 +4,7 @@ import Expense from '../models/Expense';
 
 class ExpenseController {
   async store(req, res) {
+    console.log(req.body);
     const schema = Yup.object().shape({
       type: Yup.string().required(),
       description: Yup.string(),
